@@ -8,5 +8,6 @@ output "smtp_user_username" {
 }
 
 output "smtp_user_password" {
-  value = "${aws_iam_access_key.smtp.ses_smtp_password}"
+  sensitive = true
+  value     = "${aws_iam_access_key.smtp.ses_smtp_password}"
 }
