@@ -13,6 +13,8 @@ This module creates an AWS SES resource and adds DKIM records to the provided Ro
 ## Output
 
 * \[`domain_identity_arn`\]: String: ARN of the SES domain identity.
+* \[`smtp_user_username`\]: String: Username of the SMTP user.
+* \[`smtp_user_password`\]: String: Password of the SMTP user.
 
 ## Example
 
