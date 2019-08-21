@@ -4,17 +4,21 @@ Terraform module to setup AWS SES.
 
 This module creates an AWS SES resource and adds DKIM records to the provided Route53 zone ID.
 
-## Available variables
+## Inputs
 
-* \[`domain`\]: String(required): Domain to use for SES.
-* \[`zone_id`\]: String(optional): Route 53 zone ID for the SES domain verification. If the `zone_id` is not set, we do not create verification record in R53.
-* \[`ses_records`\]: List(optional): Additional entries which are added to the _amazonses record
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| domain | Domain to use for SES | string | n/a | yes |
+| ses\_records | Additional entries which are added to the _amazonses record | list | `<list>` | no |
+| zone\_id | Route 53 zone ID for the SES domain verification | string | `""` | no |
 
-## Output
+## Outputs
 
-* \[`domain_identity_arn`\]: String: ARN of the SES domain identity.
-* \[`smtp_user_username`\]: String: Username of the SMTP user.
-* \[`smtp_user_password`\]: String: Password of the SMTP user.
+| Name | Description |
+|------|-------------|
+| domain\_identity\_arn | ARN of the SES domain identity |
+| smtp\_user\_password |  |
+| smtp\_user\_username |  |
 
 ## Example
 
